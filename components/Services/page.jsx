@@ -18,7 +18,7 @@ function Services() {
       </p>
 
 
-      <div className="min-h-screen  flex items-center justify-center p-6">
+      <div className="min-h-screen flex items-center justify-center p-6">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card, index) => (
             <Card
