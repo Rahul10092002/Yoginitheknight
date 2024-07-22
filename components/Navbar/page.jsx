@@ -17,11 +17,11 @@ const Menu = [
 
 const Navbar = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-const [isScrolled, setIsScrolled] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
   const handleDrawerToggle = () => {
     setIsDrawerOpen(!isDrawerOpen);
   };
- 
 
   useEffect(() => {
     const handleScroll = () => {
@@ -32,21 +32,22 @@ const [isScrolled, setIsScrolled] = useState(false);
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
   return (
     <nav
       className={`sticky top-0 z-50 transition-all duration-300 ${
         isScrolled
           ? "bg-white bg-opacity-50 backdrop-blur-md shadow-lg mb-0"
-          : "bg-transparent"
+          : "bg-gradient-to-tr from-gray-500 to-fuchsia-400"
       }`}
     >
-      <div className="max-w-screen-xl mx-auto px-4  sm:px-6 lg:px-8">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           <div className="flex-shrink-0">
             <Link href="/" passHref>
@@ -93,11 +94,22 @@ const [isScrolled, setIsScrolled] = useState(false);
       </div>
 
       {/* Mobile Drawer */}
-      <MobileDrawer
-        isOpen={isDrawerOpen}
-        onClose={handleDrawerToggle}
-        menu={Menu}
-      />
+      {isDrawerOpen && (
+        <div className="md:hidden">
+          <div className="flex  flex-col items-center bg-white border-t border-gray-200">
+            {Menu.map((item) => (
+              <Link key={item.id} href={item.path}>
+                <p
+                  className=" text-center py-3 text-gray-900 hover:bg-gray-100 border-b border-gray-200"
+                  onClick={handleDrawerToggle}
+                >
+                  {item.name}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
     </nav>
   );
 };

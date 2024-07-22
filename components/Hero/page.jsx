@@ -50,7 +50,7 @@ function Hero() {
             <h1 className="text-3xl font-extrabold sm:text-5xl">
               Welcome to Yogini
             </h1>
-            <strong className="font-extrabold text-3xl text-blue-300 m-2 sm:block">
+            <strong className="font-extrabold text-3xl m-2 sm:block bg-gradient-to-tr from-indigo-500 to-violet-500 bg-clip-text text-transparent">
               A Joyful Life is Our Right
             </strong>
             <p className="mt-4 sm:text-xl sm:leading-relaxed">
