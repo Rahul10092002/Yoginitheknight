@@ -20,7 +20,7 @@ const Card = ({ imageSrc, title, description }) => {
   //   </div>
   // );
   return (
-    <article className="overflow-hidden rounded-lg shadow transition hover:shadow-lg shadow-lg overflow-hidden shadow-[0px_20px_207px_10px_rgba(249,_40,_249,_0.2)]">
+    <article className="rounded-lg shadow-[0px_20px_207px_10px_rgba(249,_40,_249,_0.2)] transition hover:shadow-lg">
       <Image
         className="h-64 w-full object-cover sm:h-80 lg:h-96 rounded-lg"
         src={imageSrc}

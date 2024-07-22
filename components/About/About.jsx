@@ -16,7 +16,7 @@ function About() {
           height={300}
           alt=""
           src="https://res.cloudinary.com/drmzpmevv/image/upload/v1721496352/kxcu4vx77pgvixriztfm.jpg"
-          className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] p-4"
+          className="h-full w-full object-cover sm:h-[calc(100%_-_2rem)] sm:self-end sm:rounded-ss-[30px] md:h-[calc(100%_-_4rem)] md:rounded-ss-[60px] p-4 shadow-[0px_20px_207px_10px_rgba(249,_40,_249,_0.2)]"
         />
         <div className="p-8 md:p-12 lg:px-16 lg:py-24">
           <div className="mx-auto max-w-xl text-left ltr:sm:text-left rtl:sm:text-right">
@@ -24,7 +24,7 @@ function About() {
               ABOUT US
             </h2>
 
-            <p className="hidden text-gray-950 md:mt-4 md:block">
+            <p className=" text-gray-950 md:mt-4 md:block">
               <span className="block text-xl font-bold mb-2">
                 Take Your Yoga to the Next Level
               </span>
